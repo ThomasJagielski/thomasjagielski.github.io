@@ -1,0 +1,12 @@
+services:
+  site:
+    build: .
+    # Run as your host user so _site/ and .jekyll-cache/ aren't owned by root.
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      HOME: /tmp
+    volumes:
+      - .:/srv/jekyll
+    ports:
+      - "4000:4000"
+      - "35729:35729"

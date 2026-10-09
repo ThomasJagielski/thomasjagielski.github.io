@@ -25,6 +25,8 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
+  - Dockerfile
+  - docker-compose.yml
 include:
   - .nojekyll
   - _data
